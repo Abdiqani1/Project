@@ -1,0 +1,30 @@
+{% extends 'Skeleton.html' %}
+{% block title %} Form {% endblock %}
+{% block body %}
+
+<div class="container">
+    <form class="needs-validation" method="POST">
+        <div class="form-group">
+        {{Form.Full_Name}}
+    </div>
+        <div class="form-group">
+        {{Form.Email}}
+    </div>
+    <div class="form-group">
+        {{Form.User_name}}
+    </div>
+        <div class="form-group">
+        {{Form.password}}
+    </div>
+        <div class="form-group">
+        {{Form.phone}}
+    </div>
+        <div class="form-group">
+        {{Form.address}}
+    </div>
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="Click">
+    </form>
+</div>
+
+{% endblock %}
